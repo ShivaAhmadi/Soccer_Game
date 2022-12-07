@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] public Vector2 minMaxVerticalPos;
+    public Rigidbody2D rigid;
+    public bool UseMovePosition;
+    //private Transform gate;
+    //private float distanceball = 0.1f;
+
+    void Awake()
+    {
+    rigid = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
@@ -17,11 +27,15 @@ public class Ball : MonoBehaviour
             
         }
         
+        //gate=GameObject.FindGameObjectWithTag ("gatetop").GetComponent<Transform>();
     }
-
 
     void Update()
     {
-        
+        /*if(Mathf.Lerp((ball.transform.position.x, gate.position, distanceball)))
+        {
+
+        }*/
     }
+
 }
